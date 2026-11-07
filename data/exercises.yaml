@@ -419,9 +419,16 @@
 
 # ---------- Mobility / stretch sessions (floor) ----------
 
+- id: low-lunge
+  title: Low lunge front and back
+  type: stretch
+  how: Start in low lunge. Slide Heel forward, toes raised. Fold forward. Feel the hamstring. Slide foot back, drop toes, bend forward, feel the adductors.
+  source: Raheny Yoga
+
 - id: kneeling-hip-flexor
   title: Kneeling hip flexor stretch
   type: stretch
+  aka: Couch stretch
   mode: floor
   targets: [hip flexors]
   seconds: 60
@@ -518,6 +525,13 @@
   dose: 10 slow reps
   how: Lie on your back, knees bent. Slide arms along the floor from "W" to "Y" like a snow angel, keeping contact.
   source: Living Leggings
+
+- id: doorframe-side-bend
+  title: Door frame side bend
+  type: mobility
+  mode: standing
+  equipment: [door frame]
+  how: grab the frame high and mid, lean!
 
 - id: doorframe-hip-circles
   title: Door frame hip circles
@@ -665,6 +679,10 @@
   rating: 8
   images: [rdl-dumbbell.gif]
 
+- id: wall-v
+  title: Lying wall V legs
+  how: lie near the wall, swing legs up, and separate
+
 - id: rdl-clock
   title: Single-leg RDL clock touches
   type: balance
@@ -681,8 +699,17 @@
   targets: [legs, hip flexors, core]
   seconds: 60
   dose: 30s each side
+  how: Stand with legs hip width, step right leg back, heel down, leg straight, heel out, front knee bent. Pelvis not arching back. Raise arms, palms facing each other. To extend, reach further back and raise head to look up through hands.
   rating: 8
   images: [yoga-warrior-1.gif]
+
+- id: airplane-squat
+  title: Airplane squat
+  type: strength
+  mode: standing
+  targets: [legs]
+  seconds: 60
+  how: Stand with legs wide, heels out, lean from hips, weight on toes, chest raised, arms parallel to ground. Twist torso right, rest left hand on right thigh, raising right arm. Hold and exhale. Return to centre.
 
 - id: single-leg-squat
   title: Single leg squat

@@ -26,6 +26,11 @@
   starred: true
   steps: [toe-stab-leg-lift, ninety-ninety, doorframe-hip-circles, calf-raise]
 
+- id: stretch-and-relax
+  title: Stretch and relax session
+  when: End of day
+  steps: [king-arthur, airplane-squat, warrior-1, grok-squat, ninety-ninety, low-lunge, rdl-clock, wall-v]
+
 - id: stretch-3x
   title: Stretch session
   source: Living Leggings
