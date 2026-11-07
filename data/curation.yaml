@@ -1,0 +1,44 @@
+# Your curation of exercises.yaml.
+#
+#   star: the best ones — favoured heavily in break suggestions
+#   keep: good, normal weight
+#   drop: never suggested, hidden from the library by default
+#
+# Anything not listed is "unsorted" and is still eligible for breaks (lower weight),
+# until you've curated enough that you switch on "only suggest curated" in Settings.
+#
+# Easiest workflow: use the Curate tab in the app, then "Export curation.yaml"
+# and replace this file with the download.
+
+# Curation for exercises.yaml — exported from the Move It app 2026-11-07
+#   star: best ones, favoured in break suggestions
+#   keep: good, normal weight
+#   drop: never suggested
+star:
+  - eye-break
+  - seated-figure-4
+  - calf-raise
+  - grok-squat
+keep:
+  - deep-breaths
+  - head-rolls
+  - shoulder-rolls
+  - hands-behind-back
+  - side-bend
+  - twist
+  - seated-leg-raises
+  - standing-calf-stretch
+  - soleus-calf-stretch
+  - rainbow-calf-stretch
+  - standing-quad-stretch
+  - leg-swings
+  - side-leg-swing
+  - hip-circles
+  - hip-rolls
+  - ankle-circles
+  - arm-circles
+  - door-hang
+  - wall-stance
+  - tree-pose
+drop:
+  - chin-tucks

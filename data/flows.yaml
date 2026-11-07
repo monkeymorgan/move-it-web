@@ -1,0 +1,82 @@
+# Exercise flows (routines).
+#
+# steps can be:
+#   - an exercise id from exercises.yaml
+#   - { id: <exercise id>, seconds: 45, note: "override" }
+#   - { text: "Free-text step", seconds: 30 }   # for things not worth a full exercise
+#
+# Set `starred: true` on the flows you actually use — they're shown first.
+
+- id: desk-unwinder
+  title: Desk worker unwinder
+  when: End of a long sitting stint
+  starred: true
+  steps: [chin-tucks, head-rolls, hands-behind-back, kneeling-hip-flexor, standing-quad-stretch, twist]
+
+- id: easy-rolls
+  title: Easy rolls
+  when: Quick warm-up at the desk
+  starred: true
+  steps: [hip-rolls, ankle-circles, shoulder-rolls, arm-circles, twist]
+
+- id: daily-mobility
+  title: Daily mobility
+  source: Tom Morrison
+  when: Daily
+  starred: true
+  steps: [toe-stab-leg-lift, ninety-ninety, doorframe-hip-circles, calf-raise]
+
+- id: stretch-3x
+  title: Stretch session
+  source: Living Leggings
+  when: 3× a week, 30s holds
+  steps: [bridge-knee-dip, butchers-block, king-arthur, floor-angels, frog-squat]
+
+- id: glute-medius
+  title: Glute medius builder
+  source: ATHLEAN-X
+  when: Daily, one set each
+  steps: [toe-stab-leg-lift, toe-up-leg-lift, toe-down-leg-swing, back-leg-swing]
+
+- id: balance
+  title: Balance
+  steps: [leg-swings, tree-pose, rdl-clock, plank-hip-taps]
+
+- id: after-football
+  title: After football
+  steps:
+    - standing-calf-stretch
+    - { id: standing-quad-stretch, note: Keep the knees in tight }
+    - { text: "Standing forward bend with crossed legs — weight on toes", seconds: 60 }
+
+- id: mtb-warmup
+  title: MTB warm-up
+  steps: [hip-hinge, assisted-rdl, calf-raise]
+
+- id: relax
+  title: Relax & unlock
+  steps: [glute-bridge, standing-calf-stretch, hip-circles, grok-squat]
+
+- id: adductor-rehab
+  title: Adductor rehab
+  steps: [toe-stab-leg-lift, adductor-squeeze, side-lying-adductor-raise, adductor-slides, side-plank-marches]
+
+- id: yoga-stretch
+  title: Short yoga stretch
+  steps: [down-dog, split-lunge-twist, warrior-1]
+
+- id: kids-warmup
+  title: Fun warm-up (kids)
+  when: Jog on the spot between each
+  steps:
+    - { text: Climb the ladder, seconds: 20 }
+    - { text: Pull the rope (squat), seconds: 20 }
+    - { text: Tap heels, seconds: 20 }
+    - { text: High knees, seconds: 20 }
+    - { text: Irish dancers (front heel tap), seconds: 20 }
+    - { text: Stick breakers (high knee), seconds: 20 }
+    - { text: Lunge jumps, seconds: 20 }
+    - ice-skater
+    - { text: Star jumps, seconds: 20 }
+    - { text: Boxing — jabs and blocks, seconds: 20 }
+    - { text: Fast feet and fast hands, seconds: 20 }

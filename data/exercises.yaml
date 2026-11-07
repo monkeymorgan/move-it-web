@@ -1,0 +1,803 @@
+# Exercise library.
+#
+# Fields (all optional except id + title):
+#   id:        unique slug, referenced by flows.yaml and curation.yaml
+#   title:     display name
+#   aka:       other names
+#   mode:      standing | sitting | floor | lying
+#   type:      stretch | mobility | strength | balance | cardio | breathing | eyes | test
+#   targets:   body areas / muscles
+#   desk:      true if doable at work, in work clothes, with no kit -> eligible for break reminders
+#   equipment: what you need (band, wall, door frame, ...)
+#   dose:      human-readable amount ("10 each side", "30s hold")
+#   seconds:   timer length used by the break/flow player
+#   how:       instructions
+#   tips:      list of cues
+#   why:       the reason it's worth doing
+#   source / link
+#   images:    filenames in web/img/
+#
+# Quality is NOT set here — see curation.yaml (keep / drop / star).
+
+# ---------- Desk-friendly quick breaks ----------
+
+- id: eye-break
+  title: 20/20/20 eye break
+  type: eyes
+  mode: sitting
+  desk: true
+  seconds: 20
+  dose: 20 seconds
+  how: Look out the window at something at least 20 feet away for 20 seconds. Let your eyes go soft.
+  why: Relaxes the focusing muscles after close screen work.
+
+- id: deep-breaths
+  title: Five deep breaths
+  type: breathing
+  mode: sitting
+  desk: true
+  seconds: 45
+  dose: 5 slow breaths
+  how: Breathe in through the nose and feel the chest and ribs expand in all directions (360°). Exhale slowly — longer than the inhale.
+  why: Long exhales downshift the stress response.
+
+- id: chin-tucks
+  title: Chin tucks
+  aka: [Neck retraction]
+  type: mobility
+  mode: sitting
+  desk: true
+  targets: [neck]
+  seconds: 40
+  dose: 10 reps, 2s hold
+  how: Sit or stand tall. Glide the head straight back, making a double chin, keeping eyes level. Hold 2 seconds, release.
+  why: Counteracts forward head posture ("nerd neck").
+  images: [neck-alignment-exercise.jpg]
+
+- id: head-rolls
+  title: Slow head rolls
+  type: mobility
+  mode: sitting
+  desk: true
+  targets: [neck]
+  seconds: 40
+  dose: 3 slow circles each way
+  how: Drop the chin to the chest and roll the head slowly in a half or full circle. Go slow, breathe, pause on tight spots.
+
+- id: shoulder-rolls
+  title: Shoulder rolls
+  type: mobility
+  mode: sitting
+  desk: true
+  targets: [shoulders]
+  seconds: 30
+  dose: 10 back, 10 forward
+  how: Lift the shoulders to the ears, roll them back and down. Big, slow circles.
+
+- id: hands-behind-back
+  title: Hands behind back chest opener
+  type: stretch
+  mode: standing
+  desk: true
+  targets: [chest, shoulders]
+  seconds: 30
+  dose: 30s hold
+  how: Interlace the fingers behind your back, straighten the arms and gently lift the hands away from your body. Chest proud, chin tucked.
+  images: [standing-shoulder-stretch.png]
+
+- id: side-bend
+  title: Standing side bend
+  aka: [Side lean]
+  type: stretch
+  mode: standing
+  desk: true
+  targets: [obliques, lats]
+  seconds: 40
+  dose: 20s each side
+  how: Reach one arm overhead and lean to the opposite side, lengthening the whole side of the body. Keep hips square.
+  images: [standing-side-bend.png]
+
+- id: twist
+  title: Standing twist
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [spine]
+  seconds: 30
+  dose: 10 each side
+  how: Feet hip width, arms loose. Rotate side to side, letting the arms swing. Can also hold the back of a chair to deepen.
+  images: [twist.png]
+
+- id: seated-figure-4
+  title: Seated figure-4 hip stretch
+  type: stretch
+  mode: sitting
+  desk: true
+  targets: [hips, glutes, adductors]
+  seconds: 60
+  dose: 30s each side
+  how: Place the left ankle over the right knee. Sit tall, then hinge forward from the hips. Close eyes and breathe deep. Switch sides.
+
+- id: seated-leg-raises
+  title: Seated leg raises
+  type: strength
+  mode: sitting
+  desk: true
+  targets: [quads, hip flexors]
+  seconds: 40
+  dose: 10 each leg
+  how: Sit tall on the edge of the chair. Straighten one leg and lift it a few inches, hold 2 seconds, lower.
+  images: [seated-leg-raises.png]
+
+- id: calf-raise
+  title: Calf raises
+  type: strength
+  mode: standing
+  desk: true
+  targets: [calves]
+  seconds: 45
+  dose: 15–20 reps
+  how: Stand tall, hold the desk lightly. Rise onto the balls of the feet, pause, lower slowly.
+  tips: [Better to increase load than reps, Try single leg or off a step for more range]
+  images: [standing-desk-calf-raises.png, calf-raise.png]
+
+- id: standing-calf-stretch
+  title: Standing calf stretch
+  type: stretch
+  mode: standing
+  desk: true
+  equipment: [wall]
+  targets: [calves]
+  seconds: 60
+  dose: 30s each side
+  how: Hands on the wall (or a car), one foot back with heel down and knee straight. Lean in until you feel the calf.
+  images: [calf-stretch.png]
+
+- id: soleus-calf-stretch
+  title: Soleus calf stretch
+  type: stretch
+  mode: standing
+  desk: true
+  targets: [calves, soleus]
+  seconds: 60
+  dose: 30s each side
+  how: Like the standing calf stretch but bend the back knee. Step in front of a half-dome/step with the non-stretching leg.
+  tips: ["Don't let the knee cave inwards (\"schmearing\")"]
+
+- id: rainbow-calf-stretch
+  title: Rainbow calf stretch
+  type: stretch
+  mode: standing
+  equipment: [weight plate or half dome]
+  targets: [calves]
+  seconds: 60
+  dose: 3 angles each side
+  how: Place one foot forward on a weight plate with the heel down. Vary the angle of the foot (in, straight, out) to hit different fibres.
+
+- id: standing-quad-stretch
+  title: Standing quad stretch
+  type: stretch
+  mode: standing
+  desk: true
+  targets: [quads, hip flexors]
+  seconds: 60
+  dose: 30s each side
+  how: Hold the desk for balance, grab one ankle behind you. Knees together, tuck the pelvis under slightly.
+  images: [standing-quad.png]
+
+- id: leg-swings
+  title: Leg swings (front/back)
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [hips, hamstrings, hip flexors]
+  seconds: 40
+  dose: 10 each leg
+  how: Hold the desk. Swing one leg forward and back in a relaxed arc, gradually increasing range.
+  images: [leg-swing.png]
+
+- id: side-leg-swing
+  title: Side leg swings
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [hips, adductors]
+  seconds: 40
+  dose: 10 each leg
+  how: Hold the desk. Swing one leg across the body and out to the side.
+  images: [standing-side-leg-raises.png]
+
+- id: hip-circles
+  title: Hip circles
+  aka: [Stepping over the fence]
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [hips]
+  seconds: 40
+  dose: 5 each way, each leg
+  how: Lift the knee and draw a big circle as if stepping over a fence. Then reverse.
+  images: [hip-circles.png]
+
+- id: hip-rolls
+  title: Hip rolls
+  aka: [Hip roller]
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [hips, lower back]
+  seconds: 30
+  dose: 5 each way
+  how: Hands on hips, move the hips around a large circle.
+
+- id: ankle-circles
+  title: Ankle / foot circles
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [ankles]
+  seconds: 30
+  dose: 10 each way, each foot
+  how: Lift one foot and draw slow circles with the toes. Can be done seated.
+
+- id: arm-circles
+  title: Arm circles
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [shoulders]
+  seconds: 30
+  dose: 10 forward, 10 back
+  how: Arms out, big slow circles. Then windmill if there's space.
+
+- id: grok-squat
+  title: Grok squat
+  aka: [Deep squat hold]
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [hips, ankles, lower back]
+  seconds: 60
+  dose: 30–60s
+  how: Sink into a deep resting squat, heels down if possible (hold the desk to start). Relax and breathe.
+  why: Squatting correctly takes months/years to unlock — little and often.
+  images: [grok-squat.jpg]
+
+- id: door-hang
+  title: Door frame hang
+  aka: [Hang time]
+  type: mobility
+  mode: standing
+  equipment: [door frame or bar]
+  targets: [shoulders, spine, grip]
+  seconds: 30
+  dose: 30s
+  how: Hang from a door frame or pull-up bar, letting the shoulders and spine decompress. Feet can stay on the floor.
+  images: [hang-time.jpg]
+
+- id: wall-stance
+  title: Wall posture check
+  type: mobility
+  mode: standing
+  desk: true
+  equipment: [wall]
+  targets: [posture]
+  seconds: 60
+  dose: 1 minute
+  how: Heels, bum, shoulders and back of head lightly against the wall. Chin tucked, ribs down. Memorise the feeling and walk away with it.
+  images: [wall-stance.jpg]
+
+- id: tree-pose
+  title: Tree pose (eyes closed)
+  aka: [Yoga stance hold]
+  type: balance
+  mode: standing
+  desk: true
+  targets: [balance, ankles]
+  seconds: 60
+  dose: 30s each side
+  how: Stand on one leg, other foot on the calf or inner thigh. Hands together. Once steady, try closing your eyes.
+  images: [tree-pose.jpeg]
+
+- id: pelvic-list
+  title: Pelvic list
+  aka: [Hip list]
+  type: strength
+  mode: standing
+  desk: true
+  targets: [glute medius, gait]
+  seconds: 40
+  dose: 10 each side
+  how: Stand on one leg (on a step if possible). Keeping the knee straight, lift the opposite hip so the free foot rises, then lower.
+  why: Builds the muscles needed to bear full load on one leg while walking.
+  source: Katy Bowman — Move Your DNA
+
+- id: toe-taps
+  title: Windmill toe taps
+  type: mobility
+  mode: standing
+  targets: [hamstrings, spine, shoulders]
+  seconds: 40
+  dose: 10 each side
+  how: Wide stance, arms out. Hinge and rotate to touch the opposite foot, other arm reaching to the sky. Alternate.
+  images: [toe-taps.png]
+
+- id: standing-hamstring-raised
+  title: Standing hamstring stretch (raised foot)
+  type: stretch
+  mode: standing
+  desk: true
+  targets: [hamstrings]
+  seconds: 60
+  dose: 30s each side
+  how: Heel on a low step or chair, leg straight, toes up. Hinge forward from the hips with a flat back.
+  images: [hamstring-stretch.png]
+
+- id: stride-spinal-rotation
+  title: Stride with spinal rotation
+  type: stretch
+  mode: standing
+  desk: true
+  equipment: [table]
+  targets: [adductors, hips, spine]
+  seconds: 40
+  dose: 6 each side
+  how: Place a foot on the table and lean toward it, keeping an erect spine. Take a maximal stride position and rotate the torso toward the flexed hip.
+  rating: 8
+
+- id: hip-external-rotation-stretch
+  title: Hip external rotation stretch (table)
+  type: stretch
+  mode: standing
+  desk: true
+  equipment: [table]
+  targets: [hips, glutes]
+  seconds: 60
+  dose: 30s each side
+  how: Stand in front of a table about mid-thigh height. Rotate the leg and place the shin on the table. Other leg straight, foot flat. Keep the spine neutral and bend the stance leg to deepen.
+  rating: 8
+
+- id: adductor-stretch
+  title: Standing adductor stretch
+  aka: [Side lunge stretch]
+  type: stretch
+  mode: standing
+  desk: true
+  targets: [adductors]
+  seconds: 60
+  dose: 30s each side
+  how: Feet about 3 feet apart. Shift weight to one side, bending that knee. Keep the other knee straight to stretch the inner thigh.
+  rating: 7
+  images: [side-squat.png]
+
+- id: side-rocking
+  title: Side rocking lunges
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [adductors, hips]
+  seconds: 40
+  dose: 10 each side
+  how: Continuously and slowly lunge side to side.
+
+- id: wall-angels
+  title: Wall angels
+  type: mobility
+  mode: standing
+  desk: true
+  equipment: [wall]
+  targets: [shoulders, upper back]
+  seconds: 45
+  dose: 10 slow reps
+  how: Back flat against the wall, arms in a "W" against the wall. Slide them up to a "Y" and back down without the lower back or wrists coming off the wall.
+
+- id: hip-hinge
+  title: Hip hinge drill
+  type: mobility
+  mode: standing
+  desk: true
+  targets: [hamstrings, glutes, lower back]
+  seconds: 40
+  dose: 10 reps
+  how: Soft knees, push the hips back as if closing a car door with your bum. Flat back, chest forward. Stand up by squeezing the glutes.
+  link: https://youtu.be/u7u1q8E9Q0Q
+  images: [hip-hinge-how-to.jpeg, hip-hinge-for-biking.png]
+
+- id: foot-ball-massage
+  title: Foot ball massage
+  aka: [Foot bone mobilisation on ball]
+  type: mobility
+  mode: standing
+  desk: true
+  equipment: [tennis or massage ball]
+  targets: [feet]
+  seconds: 60
+  dose: 30s each foot
+  how: Shoes off. Roll one foot over a tennis/massage ball, working the arch and pads.
+  why: Mobilises the small bones of the foot.
+  source: Move Your DNA p55
+
+# ---------- Mobility / stretch sessions (floor) ----------
+
+- id: kneeling-hip-flexor
+  title: Kneeling hip flexor stretch
+  type: stretch
+  mode: floor
+  targets: [hip flexors]
+  seconds: 60
+  dose: 30s each side
+  how: Half-kneeling, back knee on a cushion. Tuck the pelvis under and squeeze the back glute, then shift forward slightly. Reach the arm up on the kneeling side.
+  why: Hip flexors shorten from prolonged sitting.
+  images: [kneeling-lunge.png]
+
+- id: split-lunge-twist
+  title: Split lunge with twist
+  type: stretch
+  mode: standing
+  targets: [hip flexors, adductors, spine]
+  seconds: 60
+  dose: 5 each side
+  how: Step back into a deep lunge. Arms up in "surrender". Rotate and bring arms down to chest height. Rotate to both sides.
+  source: ParkHIIT
+  rating: 8
+  images: [stretch-lunge-1.jpg, stretch-lunge-side.jpeg]
+
+- id: lunge
+  title: Lunge
+  type: strength
+  mode: standing
+  targets: [legs]
+  dose: 10 each side
+  seconds: 60
+  images: [chair-lunge.gif]
+
+- id: quadruped-rocking
+  title: Quadruped rocking with wide knees
+  type: mobility
+  mode: floor
+  targets: [adductors, hips]
+  seconds: 45
+  dose: 20 reps
+  how: On all fours, knees wide, feet turned out or pointing back. Slowly push the hips back to feel a stretch, keeping the back flat. Move forward to release.
+  rating: 8
+
+- id: ninety-ninety
+  title: 90/90 hip switches
+  type: mobility
+  mode: floor
+  targets: [hips]
+  seconds: 60
+  dose: 10 switches
+  how: Sit with both knees bent at 90°, one in front and one to the side. Rotate both knees over to the other side without using your hands if you can.
+
+- id: frog-squat
+  title: Frog squat
+  type: stretch
+  mode: floor
+  targets: [adductors, hips]
+  seconds: 30
+  dose: 30s hold
+  source: Living Leggings
+
+- id: bridge-knee-dip
+  title: Bridge knee dip
+  type: stretch
+  mode: floor
+  targets: [hip flexors, glutes]
+  seconds: 30
+  dose: 30s hold
+  source: Living Leggings
+
+- id: butchers-block
+  title: Butcher's block
+  type: stretch
+  mode: floor
+  targets: [lats, shoulders, thoracic spine]
+  seconds: 30
+  dose: 30s hold
+  how: Kneel facing a bench/chair, elbows on it with hands together. Sit the hips back and drop the chest.
+  source: Living Leggings
+
+- id: king-arthur
+  title: King Arthur (couch stretch)
+  aka: [King Richard]
+  type: stretch
+  mode: floor
+  targets: [quads, hip flexors]
+  seconds: 30
+  dose: 30s each side
+  how: Back knee against a wall or couch with the shin vertical, front foot forward in a lunge. Tuck pelvis, raise the torso upright.
+  source: Living Leggings
+
+- id: floor-angels
+  title: Floor angels
+  type: mobility
+  mode: lying
+  targets: [shoulders, thoracic spine]
+  seconds: 45
+  dose: 10 slow reps
+  how: Lie on your back, knees bent. Slide arms along the floor from "W" to "Y" like a snow angel, keeping contact.
+  source: Living Leggings
+
+- id: doorframe-hip-circles
+  title: Door frame hip circles
+  type: mobility
+  mode: standing
+  equipment: [door frame]
+  targets: [hips]
+  seconds: 60
+  dose: 5 each way, each leg
+  how: Hold the door frame, lift a knee and draw slow controlled circles through the full hip range.
+  why: Release fascia stiffened from excessive sitting.
+  source: Tom Morrison
+
+- id: wall-roll
+  title: Wall roll-down with weight
+  type: mobility
+  mode: standing
+  equipment: [wall, light weights]
+  targets: [lower back, hamstrings, shoulders]
+  seconds: 60
+  dose: 3–5 slow reps
+  how: Back against the wall, feet ~6 inches away, light weights in hand. Reach up to feel your shoulder limits, then roll down one vertebra at a time, hanging with the weights. Drop the weights at the bottom for a bit more hang. Keep knees straight and bum on the wall — don't push past tightness.
+  source: Irish Physios
+  rating: 8
+
+- id: down-dog
+  title: Downward dog
+  type: stretch
+  mode: floor
+  targets: [hamstrings, calves, shoulders]
+  seconds: 45
+  dose: 30–45s, pedal the feet
+
+- id: half-bridge-piriformis
+  title: Seated piriformis push
+  aka: [Half bridge]
+  type: stretch
+  mode: floor
+  targets: [piriformis, shoulders]
+  seconds: 60
+  dose: 30s each side
+  how: Sit on the floor, cross one ankle over the other thigh, lean back on your hands and push the hips forward.
+
+- id: prone-lumbar-extension
+  title: Prone lumbar extension
+  type: mobility
+  mode: lying
+  targets: [lower back]
+  seconds: 120
+  dose: a few minutes
+  how: Lie on your belly propped on your elbows. Good while reading.
+
+- id: foam-roll-calves
+  title: Foam roll calves
+  type: mobility
+  mode: lying
+  equipment: [foam roller]
+  targets: [calves]
+  seconds: 120
+  dose: 1 min each side
+  how: Roll slowly (about an inch per second) and breathe slowly. Full rolls to warm up, then small rolls on trigger points. Good while watching TV.
+  tips: [Never roll the lower back]
+
+# ---------- Strength ----------
+
+- id: toe-stab-leg-lift
+  title: Toe stab side leg lift
+  type: strength
+  mode: floor
+  targets: [glute medius]
+  seconds: 60
+  dose: 1 set to burn, each side
+  how: Lying on your side, point the top toe down toward the ground and bring the leg slightly in front of the body. Lift it as high as you can, hold a brief second, lower. Stop when you can't resist the burn.
+  why: Glute medius is often under-developed.
+  source: ATHLEAN-X
+  link: https://www.youtube.com/watch?v=6pKKnVg1hzE&t=135s
+  images: [side-leg-raises.png]
+
+- id: toe-up-leg-lift
+  title: Toe up side leg lift
+  type: strength
+  mode: standing
+  targets: [glute medius]
+  seconds: 60
+  dose: 1 set to burn, each side
+  how: Bring the leg behind the body and point the toe up. Lift the leg as high as you can, keeping the toe pointed up.
+  source: ATHLEAN-X
+  link: https://www.youtube.com/watch?v=6pKKnVg1hzE&t=135s
+
+- id: toe-down-leg-swing
+  title: Toe down side leg swing
+  type: strength
+  mode: standing
+  targets: [glute medius]
+  seconds: 60
+  dose: 1 set, each side
+  how: Leg in front of the body, toe pointed down. Swing it out to the side as far as you can. Drop the hip on the standing leg to get abduction there too.
+  source: ATHLEAN-X
+  link: https://www.youtube.com/watch?v=6pKKnVg1hzE&t=135s
+
+- id: back-leg-swing
+  title: Back leg swing with hip rotation
+  type: strength
+  mode: standing
+  targets: [glute medius]
+  seconds: 60
+  dose: 1 set daily, each side
+  how: Leg slightly behind the body, toe to the sky, swing the leg up and back. Rotate the hips as you swing for closed-chain external rotation.
+  tips: [One set a day is enough — consistency builds the mind-muscle connection]
+  source: ATHLEAN-X
+  link: https://www.youtube.com/watch?v=6pKKnVg1hzE&t=135s
+  images: [standing-back-leg-raises.png]
+
+- id: fire-hydrant
+  title: Fire hydrant
+  type: strength
+  mode: floor
+  equipment: [mini band]
+  targets: [glute medius]
+  seconds: 60
+  dose: 12 each side
+  how: Mini-band above the knees, on all fours with a flat back. Keeping the knee bent, raise one leg out to the side while keeping the pelvis and shoulders parallel to the floor.
+
+- id: glute-bridge
+  title: Glute bridge (band push-out)
+  type: strength
+  mode: lying
+  equipment: [mini band]
+  targets: [glutes]
+  seconds: 60
+  dose: 15 reps
+  how: On your back, knees bent, band above the knees. Lift the hips without arching the lower back and push the knees out against the band.
+  tips: [Feet as close to the bum as possible, Lift the toes — drive through the heels]
+  images: [glute-bridge.gif, glute-bridge-ext.png]
+
+- id: assisted-rdl
+  title: Assisted RDL
+  aka: [Romanian deadlift]
+  type: balance
+  mode: standing
+  equipment: [pole or dumbbell]
+  targets: [hamstrings, glutes, balance]
+  seconds: 60
+  dose: 8 each side
+  rating: 8
+  images: [rdl-dumbbell.gif]
+
+- id: rdl-clock
+  title: Single-leg RDL clock touches
+  type: balance
+  mode: standing
+  targets: [balance, glutes]
+  seconds: 60
+  dose: 1 round each leg
+  how: Balance on one leg and hinge to touch the floor at 12, 3, 6 and 9 o'clock.
+
+- id: warrior-1
+  title: Warrior 1
+  type: balance
+  mode: standing
+  targets: [legs, hip flexors, core]
+  seconds: 60
+  dose: 30s each side
+  rating: 8
+  images: [yoga-warrior-1.gif]
+
+- id: single-leg-squat
+  title: Single leg squat
+  aka: [Pistol squat]
+  type: strength
+  mode: standing
+  targets: [legs]
+  seconds: 60
+  dose: 5 each side
+  source: ParkHIIT
+  rating: 7
+
+- id: lunge-step-ups
+  title: Lunge step-ups
+  type: strength
+  mode: standing
+  equipment: [step or bench]
+  targets: [legs, glutes]
+  seconds: 60
+  dose: 10 each side
+  images: [lunge-step-ups.png]
+
+- id: plank-hip-taps
+  title: Plank with hip taps
+  type: strength
+  mode: floor
+  targets: [core]
+  seconds: 40
+  dose: 10 each side
+
+- id: side-plank-leg-raise
+  title: Side plank with leg raises
+  type: strength
+  mode: floor
+  targets: [core, glute medius]
+  seconds: 60
+  dose: 8 each side
+  source: Pilates
+
+- id: reverse-plank
+  title: Reverse plank
+  type: strength
+  mode: floor
+  targets: [posterior chain]
+  seconds: 30
+  dose: 30s
+  source: Pilates
+
+# ---------- Adductor rehab ----------
+
+- id: adductor-squeeze
+  title: Isometric adductor squeezes
+  type: strength
+  mode: lying
+  equipment: [ball or pillow]
+  targets: [adductors]
+  seconds: 60
+  dose: 5 × 10s squeeze
+  how: On your back, knees bent, squeeze a ball or pillow between the knees.
+
+- id: side-lying-adductor-raise
+  title: Side-lying adductor raises
+  type: strength
+  mode: lying
+  targets: [adductors]
+  seconds: 60
+  dose: 12 each side
+  how: Lie on your side, top leg crossed in front. Lift the bottom leg.
+
+- id: adductor-slides
+  title: Adductor stretch slides
+  type: stretch
+  mode: floor
+  targets: [adductors]
+  seconds: 60
+  dose: 10 each side
+  how: Kneel on one knee, other leg out to the side. Slide the hips back and forth.
+
+- id: side-plank-marches
+  title: Side plank marches
+  type: strength
+  mode: floor
+  targets: [adductors, core]
+  seconds: 40
+  dose: 6 each side
+
+# ---------- Cardio / fun ----------
+
+- id: ice-skater
+  title: Ice skaters
+  type: cardio
+  mode: standing
+  dose: 30s
+  seconds: 30
+  source: Joe Wicks
+
+- id: squat-hold-punches
+  title: Squat hold punches
+  type: cardio
+  mode: standing
+  dose: 30s
+  seconds: 30
+  source: Joe Wicks
+
+# ---------- Tests ----------
+
+- id: hip-extension-test
+  title: Hip extension test
+  type: test
+  mode: lying
+  how: Lie on your belly. Check how far up you can lift each leg without bending the knee.
+  why: Most people don't walk well because the hip won't let the leg move back without bending the knee.
+
+- id: hip-rom-test
+  title: Hip ROM at rest
+  type: test
+  mode: lying
+  how: Lie back, place one foot across the other leg and relax. Note where the knee drops to.

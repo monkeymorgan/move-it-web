@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Move It</title>
+  <meta name="description" content="Movement break reminders and exercise flows.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤸</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/now">Move&nbsp;It</a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#/now" data-tab="now">Now</a>
+      <a href="#/flows" data-tab="flows">Flows</a>
+      <a href="#/library" data-tab="library">Library</a>
+      <a href="#/curate" data-tab="curate">Curate</a>
+      <a href="#/settings" data-tab="settings">Settings</a>
+    </nav>
+    <span class="chip" id="countdown-chip" title="Next movement break"></span>
+  </header>
+
+  <main id="app" aria-live="polite"><p class="muted">Loading…</p></main>
+
+  <dialog id="detail"></dialog>
+
+  <script src="vendor/js-yaml.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
